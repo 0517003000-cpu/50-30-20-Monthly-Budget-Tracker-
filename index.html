@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Budget Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 contenteditable="true">Monthly Budget Tracker</h1>
+
+<div class="topbar">
+<input id="name" placeholder="Your Name">
+<input id="income" placeholder="Monthly Income">
+
+<select id="monthSelect"></select>
+<button onclick="newMonth()">+ New Month</button>
+
+<select id="language">
+<option value="en">English</option>
+<option value="id">Indonesia</option>
+</select>
+</div>
+
+<a href="https://0517003000-cpu.github.io/50-30-20-Monthly-Budget-Calculator/" target="_blank">
+Budget Calculator
+</a>
+
+<div class="tables">
+
+<!-- ESSENTIAL -->
+<div class="table">
+<h2>Essential Expenses</h2>
+<input class="budget" placeholder="Available Income">
+
+<table>
+<tr><th>Expense</th><th>Cost</th><th>Notes</th></tr>
+<tbody class="essential"></tbody>
+</table>
+
+<p>Total: <span id="totalEssential">0</span></p>
+<p>Status: <span id="statusEssential">-</span></p>
+</div>
+
+<!-- NON ESSENTIAL -->
+<div class="table">
+<h2>Non Essential Expenses</h2>
+<input class="budget" placeholder="Available Income">
+
+<table>
+<tr><th>Expense</th><th>Cost</th><th>Notes</th></tr>
+<tbody class="non"></tbody>
+</table>
+
+<p>Total: <span id="totalNon">0</span></p>
+<p>Status: <span id="statusNon">-</span></p>
+</div>
+
+<!-- SAVINGS -->
+<div class="table">
+<h2>Savings</h2>
+<input class="budget" placeholder="Available Income">
+
+<table>
+<tr><th>Source</th><th>Amount</th><th>Notes</th></tr>
+<tbody class="savings"></tbody>
+</table>
+
+<p>Total: <span id="totalSavings">0</span></p>
+<p>Recommendation: <span id="statusSavings">-</span></p>
+</div>
+
+</div>
+
+<div class="advice">
+<h2>Budget Advice</h2>
+<div id="adviceText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
